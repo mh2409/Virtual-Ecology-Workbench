@@ -5,6 +5,11 @@ import java.util.Collection;
 
 import VEW.Planktonica2.DisplayOptions;
 
+/**
+ * Comprehensive unit checker with unit equivilances and scaling
+ * @author Andrew West
+ *
+ */
 public class UnitChecker {
 	
 	private static UnitChecker unitchecker;

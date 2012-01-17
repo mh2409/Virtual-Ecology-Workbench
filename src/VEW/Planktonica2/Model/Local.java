@@ -3,7 +3,11 @@ package VEW.Planktonica2.Model;
 import java.util.ArrayList;
 import java.util.Collection;
 
-
+/**
+ * Local variables
+ * @author
+ *
+ */
 public class Local extends VariableType {
 	public Local() {
 		super();

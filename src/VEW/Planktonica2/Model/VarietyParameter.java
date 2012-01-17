@@ -3,6 +3,11 @@ package VEW.Planktonica2.Model;
 import java.util.ArrayList;
 import java.util.Collection;
 
+/**
+ * Representation of variety based parameters
+ * @author Chris Bates & Michael Hinstridge
+ *
+ */
 public class VarietyParameter extends Variety {
 
 	public VarietyParameter(FunctionalGroup funcGroup) {

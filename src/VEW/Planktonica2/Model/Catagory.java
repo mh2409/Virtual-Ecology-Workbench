@@ -10,11 +10,17 @@ import VEW.Planktonica2.ControllerStructure.SelectableItem;
 import VEW.XMLCompiler.ASTNodes.AmbientVariableTables;
 import VEW.XMLCompiler.ASTNodes.SymbolTable;
 
+/**
+ * Representation container for functional groups and chemicals
+ * @author Various
+ *
+ */
 public abstract class Catagory implements SelectableItem, BuildFromXML, BuildToXML {
-	
+
 	protected String name;
 	protected String file_path;
 	
+	/* Stores functions in a catagory */
 	protected ArrayList <Function> functions;
 	
 	protected SymbolTable<StateVariable> stateVarTable;
@@ -47,6 +53,12 @@ public abstract class Catagory implements SelectableItem, BuildFromXML, BuildToX
 		
 	}
 	
+	/**
+	 * Check to see if the variable is in one of the tables and return
+	 * as appropriate
+	 * @param variableName
+	 * @return
+	 */
 	public VariableType checkAssignableVariableTables(String variableName) {
 		StateVariable sVar = checkStateVariableTable(variableName);
 		if (sVar != null) return sVar;
@@ -58,6 +70,11 @@ public abstract class Catagory implements SelectableItem, BuildFromXML, BuildToX
 		return varState;
 	}
 	
+	/**
+	 * Check if the variable appears in the tables
+	 * @param variableName
+	 * @return
+	 */
 	public VariableType checkAccessableVariableTable(String variableName) {
 		VariableType var = checkAssignableVariableTables(variableName);
 		if (var != null) return var;
@@ -72,11 +89,21 @@ public abstract class Catagory implements SelectableItem, BuildFromXML, BuildToX
 		return var;
 	}
 	
+	/**
+	 * Check if the variable appears in all of the variable tables
+	 * @param variableName
+	 * @return
+	 */
 	public VariableType checkAllVariableTables(String variableName) {
 		VariableType var = checkAccessableVariableTable(variableName);	
 		return var;
 	}
 	
+	/**
+	 * Remove references to a variable from the tables
+	 * @param variableName
+	 * @return
+	 */
 	public VariableType removeFromTables(String variableName) {
 		StateVariable sVar = checkStateVariableTable(variableName);
 		if (sVar != null) return stateVarTable.remove(variableName);
@@ -131,7 +158,7 @@ public abstract class Catagory implements SelectableItem, BuildFromXML, BuildToX
 
 	}
 	
-	
+	/* Adders and getters for the various variable types tables */
 	public void addToStateVarTable(StateVariable var) {
 		stateVarTable.put(var.getName(), var);
 	}
@@ -290,6 +317,9 @@ public abstract class Catagory implements SelectableItem, BuildFromXML, BuildToX
 		return this.getName();
 	}
 	
+	/**
+	 * Outputs the catagory back into XML for the model
+	 */
 	public XMLTag buildToXML() throws XMLWriteBackException{
 		XMLWriteBackException collectedExceptions = new XMLWriteBackException();
 		XMLTag newTag = new XMLTag("placeholder");

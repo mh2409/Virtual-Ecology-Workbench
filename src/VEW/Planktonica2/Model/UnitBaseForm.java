@@ -2,6 +2,11 @@ package VEW.Planktonica2.Model;
 
 import java.util.ArrayList;
 
+/**
+ * Unit type system
+ * @author Andrew West
+ *
+ */
 public class UnitBaseForm {
 
 	private ArrayList<Unit> baseform;

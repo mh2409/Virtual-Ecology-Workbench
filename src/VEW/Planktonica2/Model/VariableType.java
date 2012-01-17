@@ -8,7 +8,11 @@ import VEW.Common.XML.XMLTag;
 import VEW.XMLCompiler.ASTNodes.AmbientVariableTables;
 import VEW.XMLCompiler.DependencyChecker.HasDependency;
 
-
+/**
+ * Template for variables, all variables implement this
+ * @author Various
+ *
+ */
 public abstract class VariableType implements BuildFromXML, BuildToXML, HasDependency {
 
 	private String name;
@@ -249,6 +253,7 @@ public abstract class VariableType implements BuildFromXML, BuildToXML, HasDepen
 		return editable;
 	}
 
+	// return the units formatted for Latex
 	public String get_formatted_units() {
 		String units = "";
 		for (Unit u : this.getUnits()) {

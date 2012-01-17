@@ -3,6 +3,11 @@ package VEW.Planktonica2.Model;
 import java.util.ArrayList;
 import java.util.Collection;
 
+/**
+ * Variety state var representation
+ * @author Chris Bates & Michael Hinstridge
+ *
+ */
 public class VarietyVariable extends Variety {
 
 	public VarietyVariable(FunctionalGroup funcGroup) {

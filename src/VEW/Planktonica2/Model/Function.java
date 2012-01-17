@@ -16,13 +16,20 @@ import VEW.Common.XML.XMLTag;
 import VEW.XMLCompiler.ANTLR.BACONCompiler;
 import VEW.XMLCompiler.ANTLR.CompilerException;
 
+/**
+ *  - builds from XML and back again
+ * @author Chris Bates & Michael Hinstridge
+ *
+ */
 public class Function implements BuildFromXML, BuildToXML {
 
 	private String name;
 	
+	// stage related variables
 	private Collection<Stage> calledIn;
 	private Collection<Stage> availableStages;
 	
+	// VEW info
 	private String archiveName;
 	private String comment;
 	private String author;
@@ -35,6 +42,8 @@ public class Function implements BuildFromXML, BuildToXML {
 	private List<String> warnings;
 	private XMLTag baseTag;
 
+	
+	// Constructors
 	
 	public Function(Collection<Stage> stages, String file_path, Catagory parent) {
 		this.source_file_path = get_path(file_path);
@@ -111,6 +120,7 @@ public class Function implements BuildFromXML, BuildToXML {
 		return this;
 	}
 	
+	// make the source file for a function
 	private void createSourceFile(XMLTag[] xmlTags) {
 		String parentPath = source_file_path + parent.getName() + "\\";
 		File parentDirectory = new File(parentPath);
@@ -317,6 +327,7 @@ public class Function implements BuildFromXML, BuildToXML {
 		return compiler.compile();
 	}
 
+	// read in the source from the local file
 	private String readSourceFile(String parentPath) throws FileNotFoundException, IOException {
 		FileInputStream fStream = new FileInputStream(parentPath);
 		BufferedReader buffReader = new BufferedReader(new InputStreamReader(fStream));

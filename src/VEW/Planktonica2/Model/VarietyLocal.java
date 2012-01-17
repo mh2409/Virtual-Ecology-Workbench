@@ -3,6 +3,11 @@ package VEW.Planktonica2.Model;
 import java.util.ArrayList;
 import java.util.Collection;
 
+/**
+ * Representation of variety based locals
+ * @author Michael
+ *
+ */
 public class VarietyLocal extends Variety {
 
 	public VarietyLocal(FunctionalGroup funcGroup) {

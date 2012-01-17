@@ -2,6 +2,11 @@ package VEW.Planktonica2.Model;
 
 import VEW.Common.XML.XMLTag;
 
+/**
+ * Equation representation - builds an equation from XML and back again
+ * @author Chris Bates & Michael Hinstridge
+ *
+ */
 public class Equation implements BuildFromXML, BuildToXML {
 
 	private String name;

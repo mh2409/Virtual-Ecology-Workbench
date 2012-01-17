@@ -5,6 +5,11 @@ import java.util.Iterator;
 
 import VEW.Common.XML.XMLTag;
 
+/**
+ * Represents the spectra of a chemical - builds from XML and back again
+ * @author Chris Bates & Michael Hinstridge
+ *
+ */
 public class Spectrum implements BuildFromXML, BuildToXML, Iterable<WaveLengthIntensityPair> {
 	
 	protected String name;

@@ -5,6 +5,11 @@ import java.util.Collection;
 
 import VEW.Common.XML.XMLTag;
 
+/**
+ * State variables
+ * @author Various
+ *
+ */
 public class StateVariable extends VariableType {
 
 	private String codeName;

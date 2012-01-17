@@ -18,6 +18,12 @@ import VEW.Common.XML.XMLFile;
 import VEW.Common.XML.XMLTag;
 import VEW.XMLCompiler.ASTNodes.AmbientVariableTables;
 
+/**
+ * Models - builds from XML and back again
+ * Represents the model as a structured set of objects
+ * @author Various
+ *
+ */
 public class Model implements BuildFromXML, BuildToXML {
 
 	private ArrayList<Chemical> chemicals;

@@ -1,5 +1,11 @@
 package VEW.Planktonica2.Model;
 
+/**
+ * Unit represenation
+ * Holds size, exponent and name
+ * @author Chris Bates & Michael Hinstridge
+ *
+ */
 public class Unit {
 
 	private int size;

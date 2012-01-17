@@ -2,6 +2,11 @@ package VEW.Planktonica2.Model;
 
 import java.util.Collection;
 
+/**
+ * Global variable representation, based on VariableType (like all variables)
+ * @author Various
+ *
+ */
 public class GlobalVariable extends VariableType {
 
 	private String writeBackName;

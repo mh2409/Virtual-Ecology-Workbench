@@ -2,7 +2,11 @@ package VEW.Planktonica2.Model;
 
 import java.util.ArrayList;
 
-
+/**
+ * No spectrum exists for this spectra
+ * @author Chris Bates
+ *
+ */
 public class NullSpectrum extends Spectrum {
 
 	public NullSpectrum () {

@@ -1,5 +1,10 @@
 package VEW.Planktonica2.Model;
 
+/**
+ * Enum for all the different XML tags that appear in VEW
+ * @author Chris Bates & Michael Hinstridge
+ *
+ */
 public enum XMLTagEnum {
 	FUNCTIONAL_GROUP("functionalgroup"), CHEMICAL("chemical"), NAME("name"), INVISIBLE("invisible"),
 	STAGE("stage"), FUNCTION("function"), CALLED_IN("calledin"), EQUATION("equation"), EQ("eq"), 

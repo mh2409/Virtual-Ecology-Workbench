@@ -2,8 +2,14 @@ package VEW.Planktonica2.Model;
 
 import VEW.Common.XML.XMLTag;
 
+/**
+ * Stages - builds from XML and back again
+ * @author Chris Bates & Michael Hinstridge
+ *
+ */
 public class Stage implements BuildFromXML, BuildToXML {
 	
+	// attributes
 	private Boolean log;
 	private Boolean closure;
 	private String name;
@@ -27,6 +33,7 @@ public class Stage implements BuildFromXML, BuildToXML {
 
 	@Override
 	public BuildFromXML build(XMLTag tag) {
+		// gets the tags
 		baseTag = tag;
 		String logValue = tag.getAttribute("log");
 		if (logValue != null) {

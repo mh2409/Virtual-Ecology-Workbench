@@ -5,8 +5,14 @@ import java.util.Collection;
 import VEW.Common.XML.XMLTag;
 import VEW.XMLCompiler.ASTNodes.AmbientVariableTables;
 
+/**
+ * Container for Variety based variables
+ * @author Chris Bates & Michael Hinstridge
+ *
+ */
 public abstract class Variety extends VariableType {
 	protected Catagory parentCatagory;
+	// link to a VarietyConcentration
 	private VarietyConcentration linkConcentration;
 	
 	

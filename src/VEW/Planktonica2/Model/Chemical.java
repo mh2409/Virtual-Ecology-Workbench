@@ -7,16 +7,23 @@ import java.util.Iterator;
 import VEW.Common.XML.XMLTag;
 import VEW.XMLCompiler.ASTNodes.AmbientVariableTables;
 
+/**
+ * Chemical representation - builds from XML and back again
+ * @author Chris Bates & Michael Hinstridge
+ *
+ */
 public class Chemical extends Catagory {
 
 	private String value;
 	
 	private boolean pigment;
+	
+	/* As there can be more than one spectra store as a collection */
 	private Collection<Spectrum> spectrum;
 	
 	private ArrayList<Function> functions;
 	
-	
+	/* Constructors for new chemicals */
 	public Chemical(String _file_path) {
 		super();
 		this.file_path = _file_path;

@@ -3,6 +3,11 @@ package VEW.Planktonica2.Model;
 import java.util.ArrayList;
 import java.util.Collection;
 
+/**
+ * Parameters
+ * @author Chris Bates & Michael Hinstridge
+ *
+ */
 public class Parameter extends VariableType {
 
 	public Parameter() {

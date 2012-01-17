@@ -2,6 +2,12 @@ package VEW.Planktonica2.Model;
 
 import java.util.Collection;
 
+/**
+ * Stores unit equivilances
+ * first -> scaling factor -> second
+ * @author Andrew West
+ *
+ */
 public class UnitEquivalence {
 
 	private Collection<Unit> first;

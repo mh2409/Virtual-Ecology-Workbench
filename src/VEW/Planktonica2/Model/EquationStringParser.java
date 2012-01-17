@@ -6,6 +6,11 @@ import java.util.List;
 
 import VEW.Common.StringTools;
 
+/**
+ * Parse equation strings from VEW XML into BACON
+ * @author David Coulden
+ *
+ */
 public class EquationStringParser {
 	private String equationString;
 	

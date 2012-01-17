@@ -6,6 +6,11 @@ import java.util.Collection;
 
 import VEW.XMLCompiler.ASTNodes.AmbientVariableTables;
 
+/**
+ * Variety concentration representation
+ * @author Various
+ *
+ */
 public class VarietyConcentration extends VariableType {
 
 	
@@ -22,6 +27,7 @@ public class VarietyConcentration extends VariableType {
 
 	public VarietyConcentration() {
 		super();
+		// get variables
 		AmbientVariableTables tables = AmbientVariableTables.getTables();
 		Type floatType = (Type) tables.checkTypeTable("$float");
 		VarietyType varType = new VarietyType("float", floatType);

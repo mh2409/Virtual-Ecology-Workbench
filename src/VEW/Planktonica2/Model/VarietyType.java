@@ -1,7 +1,11 @@
 package VEW.Planktonica2.Model;
 
 
-
+/**
+ * Types for Variety based variables
+ * @author Chris Bates & Michael Hinstridge
+ *
+ */
 public class VarietyType extends Type {
 	
 	private Type elementType;
@@ -31,6 +35,11 @@ public class VarietyType extends Type {
 		this.link = link;
 	}
 	
+	/**
+	 * Ingestion is a special case
+	 * @param vType
+	 * @return If vType is in the variety conc list
+	 */
 	public boolean checkLinkCompatible(VarietyType vType) {
 		String linkName = link.getName();
 		String vTypeLinkName = vType.getLink().getName();

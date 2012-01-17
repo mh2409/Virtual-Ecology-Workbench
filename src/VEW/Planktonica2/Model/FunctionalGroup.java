@@ -7,10 +7,17 @@ import VEW.Common.XML.XMLTag;
 import VEW.XMLCompiler.ASTNodes.AmbientVariableTables;
 import VEW.XMLCompiler.ASTNodes.SymbolTable;
 
+/**
+ *  - builds from XML and back again
+ * @author Chris Bates & Michael Hinstridge
+ *
+ */
 public class FunctionalGroup extends Catagory {
 
+	// invisible flag
 	private boolean invisible;
 	public static final String predVarName = "S_t";
+	// top predator flag
 	private boolean predator;
 	
 	private SymbolTable<Stage> stageTable;
@@ -36,7 +43,7 @@ public class FunctionalGroup extends Catagory {
 		addInitialStateVariables();
 	}
 
-
+	// read in variables
 	private void addInitialStateVariables() {
 		AmbientVariableTables tables = AmbientVariableTables.getTables();
 		Type floatType = tables.checkTypeTable("$float");
@@ -70,10 +77,12 @@ public class FunctionalGroup extends Catagory {
 
 
 	public void addChemicalStateVariables(String chemName) {
+		// Compiler variable table
 		AmbientVariableTables tables = AmbientVariableTables.getTables();
 		Collection<Unit> units = new ArrayList<Unit>();
 		units.add(new Unit(0, "mol", 1));
 		Type floatType = tables.checkTypeTable("$float");
+		// add new state var for _ingested
 		String refName = chemName + "_Ingested";
 		String varName = chemName + "$Ingested";
 		String varDescription = chemName + " incoming pool";
@@ -81,7 +90,7 @@ public class FunctionalGroup extends Catagory {
 													floatType, units, null, null, false);
 		chemVar.setIncludeInXML(false);
 		stateVarTable.put(refName, chemVar);
-		
+		// add new state var for _pool
 		refName = chemName + "_Pool";
 		varName = chemName + "$Pool";
 		varDescription = chemName + " internal pool";
